@@ -1,0 +1,10 @@
+language: c
+compiler:
+  - gcc
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install orbit2 liborbit2-dev
+script: make
+notifications:
+  email:
+    - yosuke.matsusaka@gmail.com

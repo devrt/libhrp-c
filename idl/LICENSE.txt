@@ -1,0 +1,2 @@
+Please follow OpenHRP license (EPL)for the IDL files.
+https://openrtp.org/svn/hrg/openhrp/3.1/trunk/LICENSE-en.txt
