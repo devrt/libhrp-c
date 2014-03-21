@@ -3,8 +3,9 @@ IDL_DIR = ./idl/
 IDLS := $(wildcard $(IDL_DIR)*.idl)
 INCLUDES := $(patsubst $(IDL_DIR)%.idl,%.h,$(IDLS))
 STUBS := $(patsubst %.h,%-stubs.o,$(INCLUDES))
+SKELS := $(patsubst %.h,%-skels.o,$(INCLUDES))
 COMMON := $(patsubst %.h,%-common.o,$(INCLUDES))
-OBJS := $(STUBS) $(COMMON)
+OBJS := $(STUBS) $(SKELS) $(COMMON)
 
 CFLAGS = -c -O2 `pkg-config --cflags ORBit-2.0`
 CC     = gcc
